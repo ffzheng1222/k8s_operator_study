@@ -1,0 +1,34 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - apps.tonyfan.io
+  resources:
+  - tonydaemonsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps.tonyfan.io
+  resources:
+  - tonydaemonsets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apps.tonyfan.io
+  resources:
+  - tonydaemonsets/status
+  verbs:
+  - get
+  - patch
+  - update
