@@ -29,11 +29,12 @@ type TonyDaemonsetSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of TonyDaemonset. Edit tonydaemonset_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Image string `json:"image,omitempty"`
 }
 
 // TonyDaemonsetStatus defines the observed state of TonyDaemonset
 type TonyDaemonsetStatus struct {
+	AvaiableReplicas int `json:"avaiableReplicas,omitempty"`
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 }
