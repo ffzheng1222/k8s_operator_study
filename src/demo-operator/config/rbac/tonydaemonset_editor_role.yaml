@@ -1,0 +1,24 @@
+# permissions for end users to edit tonydaemonsets.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: tonydaemonset-editor-role
+rules:
+- apiGroups:
+  - apps.tonyfan.io
+  resources:
+  - tonydaemonsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps.tonyfan.io
+  resources:
+  - tonydaemonsets/status
+  verbs:
+  - get

@@ -1,0 +1,16 @@
+domain: tonyfan.io
+layout:
+- go.kubebuilder.io/v3
+projectName: demo-operator
+repo: demo-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: tonyfan.io
+  group: apps
+  kind: TonyDaemonset
+  path: demo-operator/api/v1beta1
+  version: v1beta1
+version: "3"

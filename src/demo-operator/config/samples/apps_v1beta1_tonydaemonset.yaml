@@ -1,0 +1,6 @@
+apiVersion: apps.tonyfan.io/v1beta1
+kind: TonyDaemonset
+metadata:
+  name: tonydaemonset-sample
+spec:
+  # TODO(user): Add fields here
