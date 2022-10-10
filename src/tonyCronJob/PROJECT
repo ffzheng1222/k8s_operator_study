@@ -1,0 +1,16 @@
+domain: tonyfan.cronjob.io
+layout:
+- go.kubebuilder.io/v3
+projectName: tonycronjob
+repo: tonyCronJob
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: tonyfan.cronjob.io
+  group: batch
+  kind: TonyCronJob
+  path: tonyCronJob/api/v1
+  version: v1
+version: "3"

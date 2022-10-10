@@ -1,0 +1,12 @@
+apiVersion: batch.tonyfan.cronjob.io/v1
+kind: TonyCronJob
+metadata:
+  labels:
+    app.kubernetes.io/name: tonycronjob
+    app.kubernetes.io/instance: tonycronjob-sample
+    app.kubernetes.io/part-of: tonycronjob
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: tonycronjob
+  name: tonycronjob-sample
+spec:
+  # TODO(user): Add fields here

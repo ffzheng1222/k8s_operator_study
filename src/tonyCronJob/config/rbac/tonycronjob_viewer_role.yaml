@@ -1,0 +1,27 @@
+# permissions for end users to view tonycronjobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: tonycronjob-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: tonycronjob
+    app.kubernetes.io/part-of: tonycronjob
+    app.kubernetes.io/managed-by: kustomize
+  name: tonycronjob-viewer-role
+rules:
+- apiGroups:
+  - batch.tonyfan.cronjob.io
+  resources:
+  - tonycronjobs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.tonyfan.cronjob.io
+  resources:
+  - tonycronjobs/status
+  verbs:
+  - get
