@@ -1,0 +1,4 @@
+pkg/mod/cache/*
+pkg/mod/*
+pkg/sumdb/*
+bin/gopls/*
